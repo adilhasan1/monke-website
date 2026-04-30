@@ -1,0 +1,11 @@
+{
+  "name": "monke-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static frontend website with custom CI/CD validation and GitHub Pages deployment.",
+  "scripts": {
+    "validate": "node scripts/validate-site.js",
+    "test": "node scripts/smoke-test.js",
+    "build": "node scripts/build-site.js"
+  }
+}
