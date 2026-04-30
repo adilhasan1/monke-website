@@ -1,0 +1,406 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  position: relative;
+}
+nav .nav_img img {
+  background-color: white;
+  margin-top: 10px;
+}
+nav .nav_img :hover {
+  cursor: pointer;
+}
+nav .nav_icon {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+}
+nav .nav_icon i {
+  color: rgb(255, 255, 255);
+  z-index: 5;
+  font-size: 40px;
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  nav .nav_icon i {
+    display: block;
+  }
+}
+
+.nav_left {
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+}
+.nav_left a {
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.nav_left a:hover {
+  color: #f78225;
+}
+@media screen and (max-width: 500px) {
+  .nav_left .nav_left {
+    background-color: black;
+    transform: translateY(-500px);
+  }
+}
+
+main #menu {
+  width: 100%;
+  height: 500px;
+}
+main #menu #gif {
+  display: flex;
+  justify-content: center;
+}
+main #menu #left {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+main #menu #left p {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+  text-align: left;
+}
+@media screen and (max-width: 500px) {
+  main #menu #left #left {
+    height: 0 !important;
+  }
+}
+main #menu .icon {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+}
+main #menu .icon :hover {
+  cursor: pointer;
+}
+main #menu #right {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+main #menu #right .right_text {
+  width: 100%;
+}
+main #menu #right .right_text h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+main #menu #right .right_text p {
+  font-size: 20px;
+  font-weight: 400;
+}
+@media screen and (max-width: 500px) {
+  main #menu #menu {
+    height: 0;
+  }
+}
+main .img_item img {
+  width: 100%;
+  gap: 15px;
+  padding: 15px 0;
+}
+main .img_item img :hover {
+  cursor: pointer;
+}
+main .img_item .relative {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+main .img_item .relative:hover .hover {
+  opacity: 1;
+}
+main .img_item .relative img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+main .img_item .relative .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 100%;
+  height: 100%;
+  width: 0.3s ease-in-out;
+  transition: #f78225;
+  opacity: 0;
+}
+main .img_item .relative .hover .rabbit {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 50px;
+  z-index: 5;
+}
+main .img_item .relative .hover .rabbit:hover {
+  background-color: #f78225;
+  opacity: 0.4;
+}
+@media screen and (max-width: 500px) {
+  main .img_item .img_item {
+    margin-top: 0;
+  }
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+footer .nav_img img {
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+}
+footer #mail p {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  padding: 16px 0;
+  cursor: pointer;
+}
+footer #mail .monkey {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  padding: 24px 0;
+}
+footer #end .end p {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  padding: 16px 0;
+  cursor: pointer;
+}
+footer #end .icon {
+  width: 70%;
+  gap: 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer #end .icon img {
+  padding: 15px 0;
+}
+footer #end .icon {
+  cursor: pointer;
+}
+#back {
+  display: flex;
+  align-items: center;
+}
+#back img {
+  padding: 15px;
+}
+#back span {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+}
+
+main #rabbit h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+main #rabbit p {
+  line-height: 1.8;
+  font-size: 20px;
+  font-weight: 400;
+}
+main .img img {
+  width: 100%;
+  padding: 15px 0;
+}
+
+main #are_you img {
+  width: 100%;
+}
+main #are_you .are_you h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+main #are_you .are_you h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+main #are_you .are_you p {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 14px 0;
+}
+main #more_than h3 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 20px;
+}
+main #more_than img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #what_do h3 {
+  font-size: 60px;
+}
+main #what_do img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+main #what_do .left_item .text_item {
+  width: 327px;
+  height: 67px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 25px;
+}
+main #what_do .left_item p {
+  font-size: 20px;
+  font-weight: 400;
+}
+main #what_do1 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+main #what_do1 .left_item .text_item {
+  width: 170px;
+  height: 67px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 25px;
+}
+main #what_do1 .left_item p {
+  font-size: 20px;
+  font-weight: 400;
+}
+main #web img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+main #web .left_item .text_item {
+  width: 170px;
+  height: 67px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 25px;
+}
+main #web .left_item p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.tel img {
+  width: 100%;
+}
+
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "CabinetGrotesk-Variable";
+  src: url(../assest/font/CabinetGrotesk-Variable.ttf) format(opentype);
+}
+body {
+  font-family: "CabinetGrotesk-Variable";
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,370 @@
+@import "mixnin";
+@import "varaible";
+@import "resert";
+@import "home/home";
+
+body {
+    @font-face {
+        font-family: "CabinetGrotesk-Variable";
+        src: url(../assest/font/CabinetGrotesk-Variable.ttf) format(opentype);
+    }
+    font-family: "CabinetGrotesk-Variable";
+}
+
+// main {
+//     #menu {
+//         width: 100%;
+//         height: 500px;
+//         #gif {
+//             display: flex;
+//             justify-content: center;
+//         }
+
+//         #left {
+//             height: 500px;
+
+//             @include F-direc(column, center, end);
+//             p {
+//                 @include Paraq(30px, 700, 37px, left);
+//             }
+//         }
+
+//         .icon {
+//             width: 100%;
+//             @include Flex(space-around, center);
+//             padding: 15px 0;
+
+//             :hover {
+//                 cursor: pointer;
+//             }
+//         }
+
+//         #right {
+//             width: 100%;
+//             height: 500px;
+//             @include F-direc(column, center, end);
+//             .right_text {
+//                 width: 100%;
+//                 h2 {
+//                     font-size: 30px;
+//                     font-weight: 700;
+//                 }
+//                 p {
+//                     font-size: 20px;
+//                     font-weight: 400;
+//                 }
+//             }
+//         }
+
+//     }
+//     #img_item {
+//         img {
+//             width: 100%;
+            
+
+//             :hover {
+//                 cursor: pointer;
+//             }
+//         }
+
+//         .relative {
+//             position: relative;
+//             width: 100%;
+
+//             cursor: pointer;
+//             &:hover {
+//                 .hover {
+//                     opacity: .4;
+//                 }
+//             }
+//             img {
+//                 display: block;
+//                 width: 100%;
+//                 height: auto;
+//             }
+
+//             .hover {
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 right: 0;
+//                 bottom: 0;
+//                 width: 100%;
+//                 height: 100%;
+//                 transition: 0.3s ease-in-out;
+//                 background-color: #f78225;
+//                 // background-color: $bg-color;
+//                 opacity: 1;
+//             }
+
+//             .rabbit {
+//                 color: white;
+//                 position: absolute;
+//                 top: 50%;
+//                 left: 50%;
+//                 transform: translate(-50%, -50%);
+//                 text-align: center;
+//                 font-size: 50px;
+//                 text-decoration: none;
+//                 opacity: 1;
+//             }
+//         }
+//     }
+// }
+
+
+// footer {
+//     width: 100%;
+//     height: auto;
+//     background-color: black;
+
+//     .nav_img {
+//         img {
+//             background-color: white;
+//             margin-top: 10px;
+//             cursor: pointer;
+//         }
+//     }
+
+//     #mail {
+//         p {
+//             font-size: 18px;
+//             font-weight: 500;
+//             color: white;
+
+//             cursor: pointer;
+//         }
+//         .monkey {
+//             font-size: 18px;
+//             font-weight: 500;
+//             color: white;
+//             padding: 15px 0;
+//         }
+//     }
+
+//     #end {
+//         .end {
+//             p {
+//                 font-size: 18px;
+//                 font-weight: 500;
+//                 color: white;
+//                 cursor: pointer;
+//             }
+//         }
+//         .icon {
+           
+//             display: flex;
+//             justify-content: space-around;
+//             align-items: center;
+//             color: white;
+//             img {
+//                 padding: 15px 0;
+//                 color: white;
+//             }
+//             cursor: pointer;
+//         }
+//     }
+// }
+
+// cars css
+
+// #back {
+//     display: flex;
+//     align-items: center;
+//     img {
+//         padding: 15px;
+//     }
+//     span {
+//         font-size: 30px;
+//         font-weight: 400;
+//         margin: 0;
+//     }
+// }
+
+// main {
+//     #rabbit {
+//         h2 {
+//             font-size: 40px;
+//             font-weight: 700;
+//         }
+//         p {
+//             line-height: 1.8;
+//             font-size: 20px;
+//             font-weight: 400;
+//         }
+//     }
+
+//     .img {
+//         img {
+//             width: 100%;
+//             padding: 15px 0;
+//         }
+//     }
+// }
+
+
+
+// main {
+//     #are_you {
+//         .are_you {
+//             h1 {
+//                 font-size: 60px;
+//                 font-weight: 700;
+//             }
+//             h2 {
+//                 font-size: 30px;
+//                 font-weight: 700;
+//             }
+//             p {
+//                 font-size: 20px;
+//                 font-weight: 400;
+//                 padding: 14px 0;
+//             }
+//         }
+//     }
+
+//     #more_than {
+//         h3 {
+//             font-size: 30px;
+//             font-weight: 700;
+//             padding: 20px;
+//         }
+
+//         img {
+//             width: 100%;
+
+//             object-fit: cover;
+//         }
+//     }
+
+//     #what_do {
+//         h3 {
+//             font-size: 60px;
+//         }
+//         img {
+//             width: 100%;
+//             object-fit: cover;
+//             border-radius: 15px;
+//         }
+
+//         .left_item {
+//             .text_item {
+//                 width: 327px;
+//                 height: 67px;
+//                 background-color: $bg-black;
+//                 color: white;
+//                 @include Flex (center,center);
+//                 font-weight: 700;
+//                 font-size: 25px;
+//             }
+
+//             p {
+//                 font-size: 20px;
+//                 font-weight: 400;
+//             }
+//         }
+//     }
+//     #what_do1 {
+//         img {
+//             width: 100%;
+//             object-fit: cover;
+//             border-radius: 15px;
+//         }
+
+//         .left_item {
+//             .text_item {
+//                 width: 170px;
+//                 height: 67px;
+//                 background-color: black;
+//                 color: white;
+//                 @include Flex(center,center);
+//                 font-weight: 700;
+//                 font-size: 25px;
+//             }
+
+//             p {
+//                 font-size: 20px;
+//                 font-weight: 400;
+//             }
+//         }
+//     }
+
+//     #web {
+//         img {
+//             width: 100%;
+//             object-fit: cover;
+//             border-radius: 15px;
+//         }
+
+//         .left_item {
+//             .text_item {
+//                 width: 170px;
+//                 height: 67px;
+//                 background-color: black;
+//                 color: white;
+    
+//                 @include Flex(center,center);
+//                 font-weight: 700;
+//                 font-size: 25px;
+//             }
+
+//             p {
+//                 font-size: 20px;
+//                 font-weight: 400;
+//             }
+//         }
+//     }
+// }
+
+// // #contact
+
+// .main {
+//     h1 {
+//         font-size: 60px;
+//         font-weight: 700;
+//     }
+//     h2 {
+//         font-size: 30px;
+//         font-weight: 700;
+//     }
+//     p {
+//         font-size: 20px;
+//         font-weight: 400;
+//     }
+// }
+
+// #social_icon {
+//     width: 100%;
+//     height: 100px;
+
+//     @include Flex(center,center);
+
+//     img {
+//         padding: 0 50px;
+
+//         &:hover {
+//             cursor: pointer;
+//         }
+//     }
+
+//     @media screen and (max-width: 500px) {
+//         img {
+//             padding: 0 14px;
+//         }
+//     }
+// }
+
+// // #loader
+
+// #loader {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     background: black;
+//     height: 100%;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+

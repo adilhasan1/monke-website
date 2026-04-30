@@ -1,0 +1,206 @@
+// 1. Dəyişənlər (Variables)
+$primary-color: #000000;
+$accent-color: #ff6b00; // Monkee Studio narıncısı
+$text-muted: #999999;
+$bg-white: #ffffff;
+$font-main: 'Inter', sans-serif;
+$transition-fast: 0.3s ease;
+
+// 2. Mixins (Təkrar olunan kodlar üçün)
+@mixin flex-center($justify: space-between) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+// 3. Reset & Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-main;
+}
+
+body {
+  background-color: $bg-white;
+  color: $primary-color;
+}
+
+// 4. Header & Navigation
+header {
+  background-color: $primary-color;
+  padding: 20px 50px;
+  color: #fff;
+
+  nav {
+    @include flex-center();
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: lowercase;
+      
+      span {
+        font-size: 10px;
+        vertical-align: top;
+      }
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin-left: 30px;
+
+        a {
+          color: #ccc;
+          text-decoration: none;
+          font-size: 14px;
+          transition: $transition-fast;
+
+          &:hover, &.active {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 5. Contact Main Section
+.contact-container {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+
+  .contact-header {
+    h1 {
+      font-size: 80px;
+      line-height: 1;
+      font-weight: 700;
+      margin-bottom: 20px;
+
+      .highlight {
+        background-color: $accent-color;
+        color: #fff;
+        padding: 0 15px;
+        display: inline-block;
+        transform: rotate(-2deg);
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: lighten($primary-color, 40%); // Dinamik rəng açılması
+      margin-top: 20px;
+    }
+  }
+}
+
+// 6. Form & Content Grid
+.contact-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 100px;
+  margin-top: 60px;
+
+  .contact-form {
+    .input-group {
+      margin-bottom: 30px;
+
+      label {
+        display: block;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        color: $text-muted;
+      }
+
+      input, textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #eee;
+        padding: 10px 0;
+        font-size: 18px;
+        outline: none;
+        transition: $transition-fast;
+
+        &:focus {
+          border-bottom-color: $primary-color;
+        }
+      }
+    }
+
+    .send-btn {
+      background-color: $primary-color;
+      color: #fff;
+      padding: 20px 40px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      @include flex-center(flex-start);
+      transition: $transition-fast;
+
+      &:hover {
+        background-color: $accent-color;
+      }
+
+      .arrow {
+        margin-left: 15px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  // 7. Sidebar Info
+  .contact-info {
+    .info-item {
+      margin-bottom: 40px;
+
+      h3 {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $text-muted;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .socials {
+      a {
+        display: block;
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+
+        &:hover {
+          text-decoration: underline;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+// 8. Responsive (Media Queries)
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-container {
+    .contact-header h1 {
+      font-size: 50px;
+    }
+  }
+}

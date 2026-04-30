@@ -1,0 +1,60 @@
+@mixin Flex($content, $items) {
+    display: flex;
+    justify-content: $content;
+    align-items: $items;
+    
+}
+
+@mixin  F-direc ($col,$items,$content) {
+    display: flex;
+    flex-direction: $col;
+    align-items: $items;
+    justify-content: $content;
+}
+
+@mixin  Paraq ($f-size,$f-weight,$l-heght,$t-align) {
+    
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $l-heght;
+    text-align: $t-align;
+}
+
+@mixin  Span ($f-size,$f-weight,$margin) {
+    font-size: $f-size;
+    font-weight: $f-weight;
+    margin: $margin;
+}
+
+@mixin Loader ($posit,$top,$left,$bg,$hegt,$wid) {
+    position: $posit;
+    top: $top;
+    left: $left;
+    background: $bg;
+    height: $hegt;
+    width: $wid;
+}
+
+@mixin  Hover ($posit,$top,$left,$right,$bottom, $bg,$hegt,$wid,$trtion,$opac) {
+    position: $posit;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    background: $bg;
+    height: $hegt;
+    width: $wid;
+    transition: $trtion;
+    opacity: $opac;
+}
+
+@mixin  Rabbit ($clr,$pos,$top,$left,$trans,$t-aling,$f-size,$z-i) {
+    color: $clr;
+    position: $pos;
+    top: $top;
+    left: $left;
+    transform: $trans;
+    text-align: $t-aling;
+    font-size: $f-size;
+    z-index: $z-i;
+}
